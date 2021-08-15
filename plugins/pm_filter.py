@@ -310,8 +310,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     )
         elif query.data.startswith("checksub"):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer("Over smart ആവല്ലേ..  ആ അടവൊന്നും ഇവിടെ വേണ്ട..ഞാൻ പറഞ്ഞില്ലേ..
-Join channel and group first ",show_alert=True)
+                await query.answer("Over smart ആവല്ലേ..  ആ അടവൊന്നും ഇവിടെ വേണ്ട..ഞാൻ പറഞ്ഞില്ലേ..Join channel and group first ",show_alert=True)
                 return
             ident, file_id = query.data.split("#")
             filedetails = await get_file_details(file_id)
