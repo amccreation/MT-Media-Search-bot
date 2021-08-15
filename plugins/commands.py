@@ -28,7 +28,7 @@ async def start(bot, cmd):
                 ident, file_id = cmd.text.split("_-_-_-_")
                 await bot.send_message(
                     chat_id=cmd.from_user.id,
-                    text="**Please Join My Updates Channel to use this Bot!**",
+                    text="**Please Join our group & channel first!**",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -103,7 +103,7 @@ async def start(bot, cmd):
                 [
                     [
                         InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("Bot Updates", url="https://t.me/Mo_Tech_YT")
+                        InlineKeyboardButton("Bot Updates", url="https://t.me/M_M_Counter")
                     ],
                     [
                         InlineKeyboardButton("About", callback_data="about")
@@ -195,8 +195,7 @@ async def delete(bot, message):
 async def bot_info(bot, message):
     buttons = [
         [
-            InlineKeyboardButton('Update Channel', url='https://t.me/Mo_Tech_YT'),
-            InlineKeyboardButton('Video', url=f'{TUTORIAL}')
+            InlineKeyboardButton('Update Channel', url='https://t.me/M_M_Counter'),            
         ]
         ]
-    await message.reply(text=f"<b>Developer : <a href='https://t.me/subinps_bot'>SUBIN</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='{TUTORIAL}'>Click here</a>\nUpdate Channel : <a href='https://t.me/Mo_Tech_YT'>Mo Tech YT</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply(text=f"<b>MAINTAINED BY : <a href='https://t.me/vishnuprasad01'>VISHNU</a>\nRepo-CREDITS : <code>SUBIN</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nUpdate Channel : <a href='https://t.me/M_M_Counter'>M_M_Counter</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
