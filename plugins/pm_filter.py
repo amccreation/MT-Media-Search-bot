@@ -345,4 +345,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("ഒരു മനസുഖം ആയിരിക്കും ല്ലേ 😂",show_alert=True)
+        await query.answer("എന്താ കൗതുകം🤭.വെറുതെ അമർത്തുമ്പോ ഒരു മനസുഖം ആയിരിക്കും ല്ലേ😂",show_alert=True)
