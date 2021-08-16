@@ -60,10 +60,8 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
         else:
-            await client.send_text(chat_id=message.from_user.id, text='<b>Couldn't Find This Movie 😒😒 ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുത്തു നോക്കൂ 😕🥺 എന്നിട്ടും കിട്ടിയില്ലെങ്കിൽ @admin ഉപയോഗിച്ച് Group ൽ request ചെയ്യുക </b>")
-            return       
-            await asyncio.sleep(100)
-            await Send_text.delete()
+            await client.send_sticker(chat_id=message.from_user.id, sticker='AgADaQEAAiI3jgQ')
+            return
        
 
         if not btn:
