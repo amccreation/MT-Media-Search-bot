@@ -68,7 +68,7 @@ async def filter(client, message):
         )
         await asyncio.sleep(100)
         await Send_message.delete()
-       return
+       
 
         if not btn:
             return
