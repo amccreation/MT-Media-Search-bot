@@ -60,7 +60,7 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
         else:
-            await client.send_sticker(chat_id=message.from_user.id, sticker='AAMCBQADGQEAAnAqYRlKLf8Yf2kDP7zNbDzKXOKflKsAAsUDAALQNclUjt0df-1sW6EBAAdtAAMgBA')
+            await client.send_sticker(chat_id=message.from_user.id, sticker='AgADrwIAAtXG0FQ')
             return
 
         if not btn:
@@ -202,7 +202,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             try:
                 data = BUTTONS[keyword]
             except KeyError:
-                await query.answer("You are using this for one of my old message, please send the request again.",show_alert=True)
+                await query.answer("You are using old message, please send the request again🤗.",show_alert=True)
                 return
 
             if int(index) == int(data["total"]) - 2:
@@ -345,4 +345,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("ഒരു മനസുഖം ആയിരിക്കുംല്ലേ 😂",show_alert=True)
+        await query.answer("ഒരു മനസുഖം ആയിരിക്കും ല്ലേ 😂",show_alert=True)
