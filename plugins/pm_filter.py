@@ -60,7 +60,7 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
         else:
-            await client.send_sticker(chat_id=message.from_user.id, sticker='AgADrwIAAtXG0FQ')
+            await client.send_sticker(chat_id=message.from_user.id, sticker='AAMCBQADGQEAAQtP7WEaF4At6pea6syuapCHvbJYdrVvAAIVAwAC38HRVCrcuiUIUA4aAQAHbQADIAQ')
             return
 
         if not btn:
@@ -311,7 +311,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     )
         elif query.data.startswith("checksub"):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer("Over smart ആവല്ലേ.. 😏 ആ അടവൊന്നും ഇവിടെ വേണ്ട..ഞാൻ പറഞ്ഞില്ലേ..Join channel and group first ",show_alert=True)
+                await query.answer("smartness കൊള്ളാം🤭🤭 join ചെയ്യാതെ try again ചെയ്യല്ലേ 😂..ഞാൻ ആദ്യമേ പറഞ്ഞില്ലേ..🚫Join channel and group first❗️",show_alert=True)
                 return
             ident, file_id = query.data.split("#")
             filedetails = await get_file_details(file_id)
