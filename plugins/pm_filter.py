@@ -60,7 +60,7 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
         else:
-            await client.send_sticker(chat_id=message.from_user.id, sticker='AQADxQMAAtA1yVRy')
+            await client.send_sticker(chat_id=message.from_user.id, sticker='AAMCBQADGQEAAnAqYRlKLf8Yf2kDP7zNbDzKXOKflKsAAsUDAALQNclUjt0df-1sW6EBAAdtAAMgBA')
             return
 
         if not btn:
@@ -274,7 +274,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Update Channel', url='t.me/Mo_Tech_YT')                  
+                    InlineKeyboardButton('Update Channel', url='https://t.me/mmclink')                  
                 ]
                 ]
             await query.message.edit(text=f"<b>MAINTAINED BY: <a href='https://t.me/vishnuprasad01'>admin</a>\nREPO-CREDITS : <code>SUBIN</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nUpdate Channel : <a href='https://t.me/M_M_Counter'>OUR GROUP</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
@@ -311,7 +311,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     )
         elif query.data.startswith("checksub"):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer("Over smart ആവല്ലേ..  ആ അടവൊന്നും ഇവിടെ വേണ്ട..ഞാൻ പറഞ്ഞില്ലേ..Join channel and group first ",show_alert=True)
+                await query.answer("Over smart ആവല്ലേ.. 😏 ആ അടവൊന്നും ഇവിടെ വേണ്ട..ഞാൻ പറഞ്ഞില്ലേ..Join channel and group first ",show_alert=True)
                 return
             ident, file_id = query.data.split("#")
             filedetails = await get_file_details(file_id)
