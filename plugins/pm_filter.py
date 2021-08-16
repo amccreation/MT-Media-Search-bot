@@ -59,8 +59,7 @@ async def filter(client, message):
                 btn.append(
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
-        else:
-            await client.send_sticker(chat_id=message.from_user.id, sticker='AAMCBQADGQEAAQtP7WEaF4At6pea6syuapCHvbJYdrVvAAIVAwAC38HRVCrcuiUIUA4aAQAHbQADIAQ')
+        else:                 
             Send_message = await bot.send_message(
             chat_id=update.chat.id,
             text="<b>Couldn't Find This Movie.Try Again ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കൂ🥺 എന്നിട്ടും കിട്ടിയില്ലെങ്കിൽ @admin ഉപയോഗിച്ച് reqeste ചെയ്യുക </b>",
