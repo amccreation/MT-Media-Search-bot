@@ -61,7 +61,14 @@ async def filter(client, message):
                     )
         else:
             await client.send_sticker(chat_id=message.from_user.id, sticker='AAMCBQADGQEAAQtP7WEaF4At6pea6syuapCHvbJYdrVvAAIVAwAC38HRVCrcuiUIUA4aAQAHbQADIAQ')
-            return
+            Send_message = await bot.send_message(
+            chat_id=update.chat.id,
+            text="<b>Couldn't Find This Movie.Try Again ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കൂ🥺 എന്നിട്ടും കിട്ടിയില്ലെങ്കിൽ @admin ഉപയോഗിച്ച് reqeste ചെയ്യുക </b>",
+            reply_to_message_id=update.message_id
+        )
+        await asyncio.sleep(100)
+        await Send_message.delete()
+       return
 
         if not btn:
             return
